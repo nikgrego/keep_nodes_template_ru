@@ -1,0 +1,35 @@
+# Это конфигурационный TOML файл для ноды Beacon.
+
+# Подключение к блокчейну Ethereum.
+# Замените ссылки ниже на те, что указаны на сайте Infura для ноды Beacon.
+[ethereum]
+  URL = "wss://ropsten.infura.io/ws/v3/ВАШ_PROJECT_ID_НА_INFURA_ДЛЯ_НОДЫ_BEACON"
+  URLRPC = "https://ropsten.infura.io/v3/ВАШ_PROJECT_ID_НА_INFURA_ДЛЯ_НОДЫ_BEACON"
+
+
+# Адрес вашего кошелька и путь к keyfile на сервере. Замените адрес кошелька. Адрес пути менять не нужно.
+[ethereum.account]
+  Address = "АДРЕС_ВАШЕГО_КОШЕЛЬКА"
+  KeyFile = "/mnt/keep-beacon-client/config/keep-beacon-operator-account-keyfile"
+
+
+# Конфигурация адресов контрактов Keep.
+# Здесь ничего менять не нужно, но при необходимости можно сверить адреса пиров, т.к. они периодически меняются.
+# Официальные адреса для Beacon можно посмотреть тут: https://github.com/keep-network/keep-core/blob/master/docs/run-random-beacon.adoc#72-testnet
+
+[ethereum.ContractAddresses]
+ KeepRandomBeaconOperator = "0x440626169759ad6598cd53558F0982b84A28Ad7a"
+ TokenStaking = "0xEb2bA3f065081B6459A6784ba8b34A1DfeCc183A"
+ KeepRandomBeaconService = "0xF9AEdd99357514d9D1AE389A65a4bd270cBCb56c"
+
+[LibP2P]
+ Peers = ["/dns4/bootstrap-1.core.keep.test.boar.network/tcp/3001/ipfs/16Uiu2HAkuTUKNh6HkfvWBEkftZbqZHPHi3Kak5ZUygAxvsdQ2UgG",
+"/dns4/bootstrap-2.core.keep.test.boar.network/tcp/3001/ipfs/16Uiu2HAmQirGruZBvtbLHr5SDebsYGcq6Djw7ijF3gnkqsdQs3wK","/dns4/bootstrap-3.test.keep.network/tcp/3919/ipfs/16Uiu2HAm8KJX32kr3eYUhDuzwTucSfAfspnjnXNf9veVhB12t6Vf","/dns4/bootstrap-2.test.keep.network/tcp/3919/ipfs/16Uiu2HAmNNuCp45z5bgB8KiTHv1vHTNAVbBgxxtTFGAndageo9Dp"]
+ Port = 3919
+
+ # Замена стандартного порта для подключения ноды, здесь ничего менять не нужно. Мы используем порт 3920, поскольку хотим чтобы работали обе ноды.
+ AnnouncedAddresses = ["/ip4/$SERVER_IP/tcp/3920"]
+
+ # Путь к хранилищу, здесь ничего менять не нужно.
+[Storage]
+ DataDir = "/mnt/keep-beacon-client/persistence"
