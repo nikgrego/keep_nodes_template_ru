@@ -18,9 +18,9 @@
 # Официальные адреса для Beacon можно посмотреть тут: https://github.com/keep-network/keep-core/blob/master/docs/run-random-beacon.adoc#72-testnet
 
 [ethereum.ContractAddresses]
- KeepRandomBeaconOperator = "0x440626169759ad6598cd53558F0982b84A28Ad7a"
- TokenStaking = "0xEb2bA3f065081B6459A6784ba8b34A1DfeCc183A"
- KeepRandomBeaconService = "0xF9AEdd99357514d9D1AE389A65a4bd270cBCb56c"
+ KeepRandomBeaconOperator = "0x9233Fd6C58e37dab223EF1dFD5e33eD69FD1f93b"
+ TokenStaking = "0x88B3D0Bfb8F207292Dc4Cee7C923d0E7C3078a18"
+ KeepRandomBeaconService = "0xa5018dbeB6920A04e0CFd3D8F0F45BC851838b0D"
 
 [LibP2P]
  Peers = ["/dns4/bootstrap-1.core.keep.test.boar.network/tcp/3001/ipfs/16Uiu2HAkuTUKNh6HkfvWBEkftZbqZHPHi3Kak5ZUygAxvsdQ2UgG",
